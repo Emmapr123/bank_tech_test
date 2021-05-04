@@ -12,9 +12,9 @@ class Account {
     this.debit.push(0)
   }
   updateBalance(amount) {
-    this._getPreviousBalance()
     this.previousBalance ? this.balance.push(amount += this.previousBalance) : this.balance.push(amount)
     this.currentDate()
+    this._setPreviousBalance(amount)
   }
   withdraw(amount) {
     this.debit.push(amount)
@@ -24,7 +24,7 @@ class Account {
   currentDate() {
     this.date.push(new Date)
   }
-  _getPreviousBalance() {
-    this.previousBalance = this.balance[this.balance.length - 1]
+  _setPreviousBalance(amount) {
+    this.previousBalance = amount
   }
 }
