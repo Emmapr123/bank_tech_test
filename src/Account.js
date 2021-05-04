@@ -3,6 +3,7 @@ class Account {
     this.debit = []
     this.credit = []
     this.balance = []
+    this.date = []
   }
   deposit(amount) {
     this.credit.push(amount)

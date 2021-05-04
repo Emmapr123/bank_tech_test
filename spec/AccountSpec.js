@@ -59,3 +59,10 @@ describe('withdraw', function() {
     expect(statement.balance).toEqual([1000, 0])
   })
 })
+
+describe('date', function() {
+  let statement = new Account;
+  it('is an empty array when initiated', function() {
+    expect(statement.date).toEqual([])
+  })
+})
