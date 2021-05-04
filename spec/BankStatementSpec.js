@@ -29,4 +29,8 @@ describe('deposit', function() {
     statement.deposit(1000)
     expect(statement.credit).toEqual([1000])
   })
+  it('allows more than one statement, with different amounts, to be added to a bank account', function() {
+    statement.deposit(500)
+    expect(statement.credit).toEqual([1000, 500])
+  })
 })
