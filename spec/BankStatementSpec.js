@@ -12,3 +12,11 @@ describe('debit', function() {
     expect(statement.debit).toEqual([])
   })
 })
+
+describe('credit', function() {
+  let statement = new BankStatement;
+
+  it('is an empty array when initiated', function() {
+    expect(statement.credit).toEqual([])
+  })
+})

@@ -1,6 +1,7 @@
 class BankStatement {
-  constructor(debit) {
+  constructor(debit, credit) {
     this.debit = []
+    this.credit = []
   }
   balance() {
     return 0
