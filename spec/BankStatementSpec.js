@@ -41,3 +41,14 @@ describe('deposit', function() {
     expect(statement.credit).toEqual([1000, 500])
   })
 })
+
+describe('withdraw', function() {
+  let statement = new BankStatement;
+
+  it('allows a user to take money from their account', function() {
+    statement.deposit(1000)
+    statement.withdraw(1000)
+
+    expect(statement.debit).toEqual([1000])
+  })
+})

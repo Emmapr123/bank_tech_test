@@ -12,4 +12,7 @@ class BankStatement {
     let previousBalance = this.balance[this.balance.length - 1]
     previousBalance ? this.balance.push(amount += previousBalance) : this.balance.push(amount)
   }
+  withdraw(amount) {
+    this.debit.push(amount)
+  }
 }
