@@ -22,7 +22,7 @@ class Account {
     this.credit.push(0)
   }
   currentDate() {
-    this.date.push(new Date)
+    this.date.push(new Date().toLocaleDateString())
   }
   _setPreviousBalance(amount) {
     this.previousBalance = amount

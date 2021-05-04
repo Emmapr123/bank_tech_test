@@ -69,6 +69,6 @@ describe('date', function() {
   it('saves the date of each transaction', function() {
     statement.deposit(1000)
 
-    expect(statement.date[0]).toBeInstanceOf(Date)
+    expect(statement.date[0]).toBeInstanceOf(String)
   })
 })
