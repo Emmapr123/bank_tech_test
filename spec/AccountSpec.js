@@ -11,6 +11,12 @@ describe('balance', function() {
     statement.deposit(500)
     expect(statement.balance).toEqual([1000, 1500])
   })
+  it('All of the arrays have the same lenght', function() {
+    statement.withdraw(500)
+
+    expect(statement.balance.length).toEqual(statement.debit.length)
+    expect(statement.debit.length).toEqual(statement.credit.length)
+  })
 })
 
 describe('debit', function() {
@@ -49,7 +55,7 @@ describe('withdraw', function() {
     statement.deposit(1000)
     statement.withdraw(1000)
 
-    expect(statement.debit).toEqual([1000])
+    expect(statement.debit).toEqual([0, 1000])
     expect(statement.balance).toEqual([1000, 0])
   })
 })
