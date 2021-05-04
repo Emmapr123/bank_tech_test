@@ -19,4 +19,15 @@ describe('print statement', function() {
 
     expect(statement.print()).toEqual(`date || credit || debit || balance\n${statement.date} || 500.00 || 0.00 || 500.00`)
   })
+
+describe('statement with deposit and withdraw', function () {
+  let statement = new BankStatement;
+
+  it('can print a statement with a deposit and a withdraw', function() {
+    statement.deposit(500)
+    statement.withdraw(200)
+
+    expect(statement.print()).toEqual(`date || credit || debit || balance\n${statement.date[0]} || 500.00 || 0.00 || 500.00\n${statement.date[1]} || 0.00 || 200.00 || 300.00`)
+  })
+  })
 })
