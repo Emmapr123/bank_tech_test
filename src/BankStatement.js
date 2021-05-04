@@ -6,4 +6,7 @@ class BankStatement {
   balance() {
     return 0
   }
+  deposit() {
+    this.credit.push(1000)
+  }
 }
