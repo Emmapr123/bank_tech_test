@@ -1,9 +1,10 @@
 class Account {
-  constructor(debit, credit, balance) {
+  constructor(debit, credit, balance, date) {
     this.debit = []
     this.credit = []
     this.balance = []
     this.date = []
+    this.previousBalance
   }
   deposit(amount) {
     this.credit.push(amount)
@@ -11,8 +12,8 @@ class Account {
     this.debit.push(0)
   }
   updateBalance(amount) {
-    let previousBalance = this.balance[this.balance.length - 1]
-    previousBalance ? this.balance.push(amount += previousBalance) : this.balance.push(amount)
+    this._getPreviousBalance()
+    this.previousBalance ? this.balance.push(amount += this.previousBalance) : this.balance.push(amount)
     this.currentDate()
   }
   withdraw(amount) {
@@ -22,5 +23,8 @@ class Account {
   }
   currentDate() {
     this.date.push(new Date)
+  }
+  _getPreviousBalance() {
+    this.previousBalance = this.balance[this.balance.length - 1]
   }
 }
