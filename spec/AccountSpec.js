@@ -65,4 +65,10 @@ describe('date', function() {
   it('is an empty array when initiated', function() {
     expect(statement.date).toEqual([])
   })
+
+  it('saves the date of each transaction', function() {
+    statement.deposit(1000)
+
+    expect(statement.date[0]).toBeInstanceOf(Date)
+  })
 })
