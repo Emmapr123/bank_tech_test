@@ -6,6 +6,11 @@ class BankStatement {
   }
   deposit(amount) {
     this.credit.push(amount)
-    this.balance.push(amount)
+    let previousBalance = this.balance[this.balance.length - 1]
+    if (previousBalance) {
+      this.balance.push(amount += previousBalance)
+    } else {
+      this.balance.push(amount)
+    }
   }
 }

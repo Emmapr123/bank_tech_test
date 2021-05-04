@@ -7,6 +7,9 @@ describe('balance', function() {
   it('updates when credit is added to the account', function() {
     statement.deposit(1000)
     expect(statement.balance).toEqual([1000])
+
+    statement.deposit(500)
+    expect(statement.balance).toEqual([1000, 1500])
   })
 })
 
