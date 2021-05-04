@@ -14,5 +14,6 @@ class BankStatement {
   }
   withdraw(amount) {
     this.debit.push(amount)
+    this.updateBalance(-amount)
   }
 }

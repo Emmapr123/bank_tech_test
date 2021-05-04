@@ -50,5 +50,6 @@ describe('withdraw', function() {
     statement.withdraw(1000)
 
     expect(statement.debit).toEqual([1000])
+    expect(statement.balance).toEqual([1000, 0])
   })
 })
