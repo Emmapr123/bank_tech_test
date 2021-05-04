@@ -1,8 +1,12 @@
-describe('Account', function() {
+describe('balance', function() {
   let statement = new BankStatement;
 
-  it('saves each change in balance in an array', function() {
+  it('is an empty array when initiated', function() {
     expect(statement.balance).toEqual([])
+  })
+  it('updates when credit is added to the account', function() {
+    statement.deposit(1000)
+    expect(statement.balance).toEqual([1000])
   })
 })
 

@@ -6,5 +6,6 @@ class BankStatement {
   }
   deposit(amount) {
     this.credit.push(amount)
+    this.balance.push(amount)
   }
 }
