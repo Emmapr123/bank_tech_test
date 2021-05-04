@@ -4,6 +4,9 @@ describe('Account', function() {
   it('holds 0 pounds when initiated', function() {
     expect(statement.balance()).toEqual(0)
   })
+  it('saves each change in balance in an array', function() {
+    expect(statement.total).toEqual([])
+  })
 })
 
 describe('debit', function() {
