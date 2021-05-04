@@ -1,4 +1,4 @@
-class BankStatement {
+class Account {
   constructor(debit, credit, balance) {
     this.debit = []
     this.credit = []
