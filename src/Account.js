@@ -16,14 +16,13 @@ class Account {
     this._setPreviousBalance(amount);
   }
   withdraw(amount) {
-    if (amount > this.previousBalance) {
-      let withdrawError = new Error('Insufficient funds')
-      throw withdrawError
-    } else {
+    let withdrawError = new Error('Insufficient funds')
+    amount > this.previousBalance ? (function() { throw withdrawError }()) : this.withdrawAmount(amount)
+  }
+  withdrawAmount(amount) {
     this.debit.push(amount)
     this.updateBalance(-amount);
     this.credit.push(0);
-    }
   }
   currentDate() {
     this.date.push(new Date().toLocaleDateString());
