@@ -11,9 +11,7 @@ class Account {
     this.debit.push(0);
   }
   updateBalance(amount) {
-    this.previousBalance
-      ? this.balance.push((amount += this.previousBalance))
-      : this.balance.push(amount);
+    this.previousBalance ? this.balance.push((amount += this.previousBalance)) : this.balance.push(amount);
     this.currentDate();
     this._setPreviousBalance(amount);
   }

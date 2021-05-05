@@ -1,0 +1,35 @@
+{
+  "name": "bank_tech_test",
+  "version": "1.0.0",
+  "description": "### User stories",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "jasmine-core": "^2.99.1",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.1.2",
+    "karma-phantomjs-launcher": "^1.0.2"
+  },
+  "scripts": {
+    "test": "karma start karma.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emmapr123/bank_tech_test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Emmapr123/bank_tech_test/issues"
+  },
+  "homepage": "https://github.com/Emmapr123/bank_tech_test#readme",
+  "dependencies": {
+    "karma-cli": "^2.0.0"
+  }
+}

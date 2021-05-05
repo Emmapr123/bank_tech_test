@@ -1,5 +1,5 @@
 describe("balance", function () {
-  let statement = new Account();
+  const statement = new Account();
 
   it("is an empty array when initiated", function () {
     expect(statement.balance).toEqual([]);
@@ -20,7 +20,7 @@ describe("balance", function () {
 });
 
 describe("debit", function () {
-  let statement = new Account();
+  const statement = new Account();
 
   it("is an empty array when initiated", function () {
     expect(statement.debit).toEqual([]);
@@ -28,7 +28,7 @@ describe("debit", function () {
 });
 
 describe("credit", function () {
-  let statement = new Account();
+  const statement = new Account();
 
   it("is an empty array when initiated", function () {
     expect(statement.credit).toEqual([]);
@@ -36,7 +36,7 @@ describe("credit", function () {
 });
 
 describe("deposit", function () {
-  let statement = new Account();
+  const statement = new Account();
 
   it("allows a user to add a deposit, which is saved as credit in their bank account", function () {
     statement.deposit(1000);
@@ -49,7 +49,7 @@ describe("deposit", function () {
 });
 
 describe("withdraw", function () {
-  let statement = new Account();
+  const statement = new Account();
 
   it("allows a user to take money from their account", function () {
     statement.deposit(1000);
@@ -61,7 +61,8 @@ describe("withdraw", function () {
 });
 
 describe("date", function () {
-  let statement = new Account();
+  const statement = new Account();
+
   it("is an empty array when initiated", function () {
     expect(statement.date).toEqual([]);
   });
@@ -69,6 +70,6 @@ describe("date", function () {
   it("saves the date of each transaction", function () {
     statement.deposit(1000);
 
-    expect(statement.date[0]).toBeInstanceOf(String);
+    expect(statement.date[0]).toEqual(jasmine.any(String));
   });
 });
