@@ -58,6 +58,10 @@ describe("withdraw", function () {
     expect(statement.debit).toEqual([0, 1000.0]);
     expect(statement.balance).toEqual([1000.0, 0]);
   });
+
+  it('does not allow to overwrite the credit', function() {
+    expect(function() { statement.withdraw(500) } ).toThrow(new Error('Insufficient funds'))
+  })
 });
 
 describe("date", function () {
