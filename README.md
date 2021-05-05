@@ -1,5 +1,36 @@
 ## Bank tech test
 
+### How to run me
+
+- Clone this repo
+- run npm install 
+- run 'open SpecRunner.html'
+- set the test to not run randomly - but in order
+- open the console
+
+Create a new Bankstatement
+
+```javascript
+statement = new BankStatement;
+```
+
+Make a deposit
+```javascript
+statement.deposit(1000);
+```
+
+Take money from the account
+```javascript
+statement.withdraw(500);
+```
+
+Print your bank statement
+```javascript
+statement.print();
+```
+
+- for test coverage, run npm test or yarn test
+
 ### User stories
 
 ```
