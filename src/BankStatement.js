@@ -10,8 +10,7 @@ class BankStatement extends Account {
     for (let i = 0; i < this.balance.length; i++) {
       this.transaction.push(
         `${this.date[i]} || ${this.credit[i]}.00 || ${this.debit[i]}.00 || ${this.balance[i]}.00`
-      );
-    }
+      );}
     return this.transaction.join(`\n`);
   }
 }

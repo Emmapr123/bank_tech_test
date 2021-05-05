@@ -60,7 +60,7 @@ describe("withdraw", function () {
   });
 
   it('does not allow to overwrite the credit', function() {
-    expect(function() { statement.withdraw(500) } ).toThrow(new Error('Insufficient funds'))
+    expect(function() { statement.withdraw(500) } ).toThrow('Insufficient funds')
   })
 });
 

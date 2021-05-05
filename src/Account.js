@@ -16,8 +16,7 @@ class Account {
     this._setPreviousBalance(amount);
   }
   withdraw(amount) {
-    let withdrawError = new Error('Insufficient funds')
-    amount > this.previousBalance ? (function() { throw withdrawError }()) : this.withdrawAmount(amount)
+    amount > this.previousBalance ? (function() { throw 'Insufficient funds' }()) : this.withdrawAmount(amount)
   }
   withdrawAmount(amount) {
     this.debit.push(amount)
