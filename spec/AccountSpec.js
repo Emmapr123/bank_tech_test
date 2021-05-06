@@ -5,4 +5,11 @@ describe('Account', function() {
     account.deposit(500)
     expect(account.transactions[0].debit).toEqual(500)
   })
+  it('can withdraw', function() {
+    account = new Account;
+
+    account.deposit(500)
+    account.withdraw(200)
+    expect(account.transactions[1].credit).toEqual(200)
+  })
 })
