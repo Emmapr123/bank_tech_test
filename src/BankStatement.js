@@ -5,7 +5,7 @@ class BankStatement {
     this.balance = 0
   }
   print() {
-    return  `date || credit || debit || balance\n${this.transactions()}`;
+    console.log(  `date || credit || debit || balance\n${this.transactions()}`);
   }
   transactions() {
     for (let i = 0; i < this.transaction.length; i++) {
