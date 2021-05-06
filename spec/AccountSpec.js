@@ -14,9 +14,16 @@ describe('Account', function() {
   })
   it("saves the date of each transaction", function () {
       const account = new Account
-      
+
       account.deposit(500)
       expect(account.transactions[0].date).toEqual(jasmine.any(String));
   });
+
+  it('can print a statement', function() {
+    const account = new Account
+
+    account.deposit(500)
+    expect(account.print()).toEqual(`date || credit || debit || balance\n${account.transactions[0].date} ||  || 500.00 || 500.00`)
+  })
 })
 

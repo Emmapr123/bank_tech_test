@@ -11,4 +11,9 @@ class Account {
   createDate() {
     return new Date().toLocaleDateString()
   }
+  print() {
+    const statement = new BankStatement(this.transactions)
+    console.log(statement)
+    return statement.print()
+  }
 }

@@ -10,23 +10,23 @@ describe("BankStatement", function () {
   });
 });
 
-describe("print statement", function () {
-  const statement = new BankStatement([new Transaction(0, 500, '06/05/2021')]);
+// describe("print statement", function () {
+//   const statement = new BankStatement([new Transaction(0, 500, '06/05/2021')]);
 
-  it("can print a statement with a single deposit", function () {
+//   it("can print a statement with a single deposit", function () {
 
-    expect(statement.print()).toEqual(
-      "date || credit || debit || balance\n06/05/2021 || 500.00 ||  || 500.00"
-    );
-  });
-});
+//     expect(statement.print()).toEqual(
+//       "date || credit || debit || balance\n06/05/2021 || 500.00 ||  || 500.00"
+//     );
+//   });
+// });
 
-describe("statement with deposit and withdraw", function () {
-  it("can print a statement with a deposit and a withdraw", function () {
-    const statement = new BankStatement([new Transaction(0, 500, '03/07/2020'), new Transaction(200, 0, '03/12/2020')]);
+// describe("statement with deposit and withdraw", function () {
+//   it("can print a statement with a deposit and a withdraw", function () {
+//     const statement = new BankStatement([new Transaction(0, 500, '03/07/2020'), new Transaction(200, 0, '03/12/2020')]);
 
-    expect(statement.print()).toEqual(
-      "date || credit || debit || balance\n03/12/2020 ||  || 200.00 || 300.00\n03/07/2020 || 500.00 ||  || 500.00"
-    );
-  });
-});
+//     expect(statement.print()).toEqual(
+//       "date || credit || debit || balance\n03/12/2020 ||  || 200.00 || 300.00\n03/07/2020 || 500.00 ||  || 500.00"
+//     );
+//   });
+// });
