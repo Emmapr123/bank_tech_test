@@ -31,7 +31,7 @@ describe("statement with deposit and withdraw", function () {
     statement.withdraw(200);
 
     expect(statement.print()).toEqual(
-      'date || credit || debit || balance\n'+ statement.date[0] + " || 500.00 || 0.00 || 500.00\n" + statement.date[1] + " || 0.00 || 200.00 || 300.00"
+      'date || credit || debit || balance\n'+ statement.date[0] + " || 0.00 || 200.00 || 300.00\n" + statement.date[1] + " || 500.00 || 0.00 || 500.00"
     );
   });
 });
