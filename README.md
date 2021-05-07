@@ -1,5 +1,14 @@
 ## Bank tech test
 
+### Context
+
+This is a small bank app - A user can create an account, with which they can make deposits and withdraws, and they can print their bank statement.
+
+### Notes for review
+
+- I asked for help on mocking/spying but got no response, so I am fully aware that that lacks in my test, I just cant figure it out by myself
+- 
+
 ### How to run me
 
 - Clone this repo
@@ -10,22 +19,22 @@
 Create a new Bankstatement
 
 ```javascript
-statement = new BankStatement;
+account = new Account;
 ```
 
 Make a deposit
 ```javascript
-statement.deposit(1000);
+account.deposit(1000);
 ```
 
 Take money from the account
 ```javascript
-statement.withdraw(500);
+account.withdraw(500);
 ```
 
 Print your bank statement
 ```javascript
-statement.print();
+account.print();
 ```
 
 - for test coverage, run npm run test
